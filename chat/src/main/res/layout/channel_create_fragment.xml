@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
-    tools:context="cn.wildfire.chat.kit.channel.CreateChannelActivity">
+    tools:context="com.mengchat.chat.kit.channel.CreateChannelActivity">
 
     <include layout="@layout/toolbar" />
 
@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:padding="20dp">
 
-        <cn.wildfire.chat.kit.widget.FixedTextInputEditText
+        <com.mengchat.chat.kit.widget.FixedTextInputEditText
             android:id="@+id/channelNameTextInputEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:padding="20dp">
 
-        <cn.wildfire.chat.kit.widget.FixedTextInputEditText
+        <com.mengchat.chat.kit.widget.FixedTextInputEditText
             android:id="@+id/channelDescTextInputEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

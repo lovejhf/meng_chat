@@ -20,7 +20,7 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginTop="5dp"
-            android:src="@mipmap/ic_launcher" />
+            android:src="@mipmap/ic_logo" />
         <!--未读消息数-->
         <TextView
             android:id="@+id/unreadCountTextView"

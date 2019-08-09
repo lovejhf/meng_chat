@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/locationLinearLayout"
+    android:layout_width="250dp"
+    android:paddingRight="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingLeft="10dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <com.aries.ui.view.radius.RadiusLinearLayout
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:id="@+id/bg_package"
+        app:rv_topLeftRadius="2.5dp"
+        app:rv_topRightRadius="2.5dp"
+        app:rv_backgroundColor="#FF5C5C"
+        >
+        <TextView
+        android:id="@+id/locationTitleTextView"
+        android:layout_width="match_parent"
+            android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="right"
+        android:text="恭喜发财,大吉大利"
+        android:textColor="@color/white"
+        android:textColorLink="#666666"
+        android:textSize="18sp"
+        />
+
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/ic_money"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/key"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content" />
+
+
+    </com.aries.ui.view.radius.RadiusLinearLayout>
+    <com.aries.ui.view.radius.RadiusTextView
+        android:text="萌聊红包"
+        android:padding="5dp"
+        android:gravity="right"
+        app:rv_bottomRightRadius="2.5dp"
+        app:rv_bottomLeftRadius="2.5dp"
+        android:textColor="@color/gray7"
+        app:rv_backgroundColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
+

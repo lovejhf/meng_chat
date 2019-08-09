@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/bg_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@mipmap/bg_red_package_detail"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+    <com.hjq.bar.TitleBar
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        app:bar_style="transparent"
+        app:color_title="#F9FFB3"
+        app:title="萌聊红包"
+        app:size_title="18sp"
+        app:color_right="#F9FFB3"
+        app:title_right="红包记录"
+        android:layout_height="wrap_content"/>
+    <com.allen.library.CircleImageView
+        android:layout_width="60dp"
+        android:layout_below="@id/bg_header"
+        android:id="@+id/header"
+        android:layout_marginTop="-30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="60dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"
+        android:id="@+id/name"
+        android:layout_below="@id/header"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:text=""
+        android:id="@+id/red_title"
+        android:padding="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/name"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

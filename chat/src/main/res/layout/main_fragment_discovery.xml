@@ -15,7 +15,12 @@
         android:layout_width="match_parent"
         android:background="@drawable/shape_gradient"
         android:layout_height="wrap_content"/>
+    <com.mengchat.chat.kit.widget.ProgressWebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
     <com.lqr.optionitemview.OptionItemView
+        android:visibility="gone"
         android:id="@+id/chatRoomOptionItemView"
         style="@style/OptionItem"
         android:layout_marginTop="@dimen/option_item_margin_top"
@@ -28,6 +33,7 @@
         app:left_text_size="16sp" />
 
     <com.lqr.optionitemview.OptionItemView
+        android:visibility="gone"
         android:id="@+id/robotOptionItemView"
         style="@style/OptionItem"
         android:layout_marginTop="@dimen/option_item_margin_top"
@@ -40,6 +46,7 @@
         app:left_text_size="16sp" />
 
     <com.lqr.optionitemview.OptionItemView
+        android:visibility="gone"
         android:id="@+id/channelOptionItemView"
         style="@style/OptionItem"
         android:layout_marginTop="@dimen/option_item_margin_top"

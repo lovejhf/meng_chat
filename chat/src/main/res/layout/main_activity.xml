@@ -19,7 +19,7 @@
             android:orientation="vertical">
 
 
-            <cn.wildfire.chat.kit.widget.ViewPagerFixed
+            <com.mengchat.chat.kit.widget.ViewPagerFixed
                 android:id="@+id/contentViewPager"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -45,6 +45,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="野火IM初始化中" />
+            android:text="萌聊IM初始化中" />
     </FrameLayout>
 </LinearLayout>

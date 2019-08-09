@@ -118,4 +118,8 @@ dependencies {
 
     implementation 'com.github.pinguo-zhouwei:CustomPopwindow:2.1.1'
 
+    implementation 'com.lzy.net:okgo:3.0.4'
+
+    implementation 'com.alibaba:fastjson:1.2.24'
+
 }

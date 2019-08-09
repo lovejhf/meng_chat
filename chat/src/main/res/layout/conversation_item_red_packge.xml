@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/locationLinearLayout"
+    android:layout_width="250dp"
+    android:paddingRight="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingLeft="10dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <com.aries.ui.view.radius.RadiusLinearLayout
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:id="@+id/bg_package"
+        app:rv_topLeftRadius="2.5dp"
+        app:rv_topRightRadius="2.5dp"
+        android:orientation="horizontal"
+        app:rv_backgroundColor="#FF5C5C"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:src="@mipmap/ic_money"
+            android:id="@+id/key"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/locationTitleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="恭喜发财,大吉大利"
+            android:textColor="@color/white"
+            android:layout_gravity="center_vertical"
+            android:textColorLink="#666666"
+            android:textSize="18sp"
+            android:layout_toRightOf="@+id/key" />
+
+    </com.aries.ui.view.radius.RadiusLinearLayout>
+    <com.aries.ui.view.radius.RadiusTextView
+        android:text="萌聊红包"
+        android:padding="5dp"
+        app:rv_bottomRightRadius="2.5dp"
+        app:rv_bottomLeftRadius="2.5dp"
+        android:textColor="@color/gray7"
+        app:rv_backgroundColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
+
