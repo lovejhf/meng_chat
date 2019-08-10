@@ -18,6 +18,7 @@ public class TypingMessageContent extends MessageContent {
     public static final int TYPING_VOICE = 1;
     public static final int TYPING_CAMERA = 2;
     public static final int TYPING_LOCATION = 3;
+    public static final int TYPING_RED = 5;
     public static final int TYPING_FILE = 4;
 
     private int type;

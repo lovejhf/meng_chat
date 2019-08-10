@@ -39,12 +39,14 @@ import java.util.UUID;
 
 import cn.wildfirechat.message.CallStartMessageContent;
 import cn.wildfirechat.message.FileMessageContent;
+import cn.wildfirechat.message.FingerMessageContent;
 import cn.wildfirechat.message.ImageMessageContent;
 import cn.wildfirechat.message.ImageTextMessageContent;
 import cn.wildfirechat.message.LocationMessageContent;
 import cn.wildfirechat.message.MediaMessageContent;
 import cn.wildfirechat.message.Message;
 import cn.wildfirechat.message.MessageContent;
+import cn.wildfirechat.message.RedPackgeMessageContent;
 import cn.wildfirechat.message.SoundMessageContent;
 import cn.wildfirechat.message.StickerMessageContent;
 import cn.wildfirechat.message.TextMessageContent;
@@ -70,6 +72,8 @@ import cn.wildfirechat.message.notification.ModifyGroupAliasNotificationContent;
 import cn.wildfirechat.message.notification.NotificationMessageContent;
 import cn.wildfirechat.message.notification.QuitGroupNotificationContent;
 import cn.wildfirechat.message.notification.RecallMessageContent;
+import cn.wildfirechat.message.notification.RobRedMessageContent;
+import cn.wildfirechat.message.notification.ShakeMessageContent;
 import cn.wildfirechat.message.notification.TipNotificationContent;
 import cn.wildfirechat.message.notification.TransferGroupOwnerNotificationContent;
 import cn.wildfirechat.model.ChannelInfo;
@@ -605,6 +609,12 @@ public class ClientService extends Service implements SdtLogic.ICallBack,
             return out;
         }
 
+        /**
+         *
+         * @param userId 设置黑名单
+         * @return
+         * @throws RemoteException
+         */
         @Override
         public boolean isBlackListed(String userId) throws RemoteException {
             return ProtoLogic.isBlackListed(userId);
@@ -1770,6 +1780,12 @@ public class ClientService extends Service implements SdtLogic.ICallBack,
             mBinder.registerMessageContent(GroupJoinTypeNotificationContent.class.getName());
             mBinder.registerMessageContent(GroupPrivateChatNotificationContent.class.getName());
             mBinder.registerMessageContent(GroupSetManagerChatNotificationContent.class.getName());
+            mBinder.registerMessageContent(RedPackgeMessageContent.class.getName());
+
+            mBinder.registerMessageContent(FingerMessageContent.class.getName());
+            mBinder.registerMessageContent(RobRedMessageContent.class.getName());
+
+            mBinder.registerMessageContent(ShakeMessageContent.class.getName());
         } catch (RemoteException e) {
             e.printStackTrace();
         }

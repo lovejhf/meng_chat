@@ -18,7 +18,15 @@ public interface MessageContentType {
     int ContentType_Sticker = 7;
     int ContentType_ImageText = 8;
 
+    int ContentType_RedPackge =9;//红包
+
+    int MESSAGE_CONTENT_TYPE_FINGER= 10;//猜拳
+
     int ContentType_Recall = 80;
+
+    int ContentType_RED_ENVELOPE_STATUS = 81;//红包被领取消息类型
+
+    int ContentType_SHAKE_STATUS = 82;//抖动消息类型
 
     //提醒消息
     int ContentType_Tip_Notification = 90;
@@ -34,6 +42,7 @@ public interface MessageContentType {
     int ContentType_QUIT_GROUP = 107;
     int ContentType_DISMISS_GROUP = 108;
     int ContentType_TRANSFER_GROUP_OWNER = 109;
+
 
 
     int ContentType_CHANGE_GROUP_NAME = 110;

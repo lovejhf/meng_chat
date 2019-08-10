@@ -31,11 +31,6 @@ public class LocationMessageContent extends MessageContent {
         location = new Location(LocationManager.GPS_PROVIDER);
     }
 
-    public LocationMessageContent(String title, Bitmap thumbnail, Location location) {
-        this.title = title;
-        this.thumbnail = thumbnail;
-        this.location = location;
-    }
 
     public String getTitle() {
         return title;

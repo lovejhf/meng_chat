@@ -1128,17 +1128,36 @@ public class ChatManager {
      * 更新消息
      *
      * @param messageId     消息id
-     * @param newMsgContent 新的消息体，未更新部分，不可置空！
      * @return
      */
-    public boolean updateMessage(long messageId, MessageContent newMsgContent) {
+    public boolean updateMessage(long messageId) {
         if (!checkRemoteService()) {
             return false;
         }
 
         try {
             Message message = mClient.getMessage(messageId);
-            message.content = newMsgContent;
+            boolean result = mClient.updateMessage(message);//有Bug
+            mainHandler.post(() -> {
+                for (OnMessageUpdateListener listener : messageUpdateListeners) {
+                    listener.onMessageUpdate(message);
+                }
+            });
+            return result;
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    public boolean updateRedPackageMessage(long messageId,MessageContent newMsgContent) {
+        if (!checkRemoteService()) {
+            return false;
+        }
+
+        try {
+            Message message = mClient.getMessage(messageId);
+            message.content =newMsgContent;
             boolean result = mClient.updateMessage(message);
             mainHandler.post(() -> {
                 for (OnMessageUpdateListener listener : messageUpdateListeners) {
@@ -1151,6 +1170,7 @@ public class ChatManager {
         }
         return false;
     }
+
 
     /**
      * 连接服务器
@@ -1738,6 +1758,7 @@ public class ChatManager {
             e.printStackTrace();
         }
     }
+
 
     /**
      * 清除所有会话的未读状态

@@ -5,6 +5,7 @@ package cn.wildfirechat.message.core;
  */
 
 public enum MessageStatus {
+    //消息状态类型
     Sending(0),
     Sent(1),
     Send_Failure(2),
@@ -12,7 +13,8 @@ public enum MessageStatus {
     AllMentioned(4),
     Unread(5),
     Readed(6),
-    Played(7);
+    Played(7),
+    Received(8);
 
 
     private int value;
@@ -51,6 +53,9 @@ public enum MessageStatus {
                 break;
             case 7:
                 messageStatus = Played;
+                break;
+            case 8:
+                messageStatus = Received;
                 break;
             default:
                 throw new IllegalArgumentException("status " + status + "is not valid");
