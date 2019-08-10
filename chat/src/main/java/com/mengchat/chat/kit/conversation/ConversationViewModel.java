@@ -29,6 +29,7 @@ import java.util.Map;
 
 import cn.wildfirechat.RedEnvelopeVo;
 import cn.wildfirechat.message.FileMessageContent;
+import cn.wildfirechat.message.FingerMessageContent;
 import cn.wildfirechat.message.ImageMessageContent;
 import cn.wildfirechat.message.LocationMessageContent;
 import cn.wildfirechat.message.MediaMessageContent;
@@ -409,6 +410,11 @@ public class ConversationViewModel extends ViewModel implements OnReceiveMessage
         sendMessage(robRedMessageContent);
     }
 
+    //猜拳
+    public void sendFingerMessage(String  name){
+        FingerMessageContent rpg = new FingerMessageContent(name);
+        sendMessage(rpg);
+    }
 
     public void sendStickerMsg(String localPath, String remoteUrl) {
         StickerMessageContent stickerMessageContent = new StickerMessageContent(localPath);

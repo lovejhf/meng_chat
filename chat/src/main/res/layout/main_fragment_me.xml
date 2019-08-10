@@ -18,16 +18,16 @@
     <LinearLayout
         android:id="@+id/meLinearLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_height="90dp"
         android:background="@drawable/selector_common_item"
         android:gravity="center_vertical"
-        android:paddingRight="3dp">
+        >
 
-        <ImageView
+        <com.allen.library.CircleImageView
             android:id="@+id/portraitImageView"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:scaleType="fitXY"
             android:layout_margin="10dp"
             android:src="@mipmap/default_header" />
 
@@ -61,46 +61,79 @@
                 android:visibility="gone" />
 
         </LinearLayout>
-
+        <ImageView
+            android:layout_width="wrap_content"
+            android:src="@mipmap/ic_qr_code"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:src="@mipmap/ic_left_more"
+            android:layout_height="wrap_content" />
     </LinearLayout>
+    <com.allen.library.SuperTextView
+        android:id="@+id/wallet"
+        android:layout_marginTop="10dp"
+        app:sLeftTextString="钱包"
+        app:sRightIconRes="@mipmap/ic_left_more"
+        app:sLeftIconRes="@mipmap/ic_me_money_package"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+    <com.allen.library.SuperTextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/qr_sao"
+        app:sLeftTextString="扫一扫"
+        app:sRightIconRes="@mipmap/ic_left_more"
+        app:sLeftIconRes="@mipmap/ic_me_sao"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
 
+    <com.allen.library.SuperTextView
+        android:layout_marginTop="10dp"
+        app:sLeftTextString="新消息通知"
+        android:id="@+id/new_message"
+        app:sRightIconRes="@mipmap/ic_left_more"
+        app:sLeftIconRes="@mipmap/ic_me_message"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+    <com.allen.library.SuperTextView
+        app:sLeftTextString="安全与隐私"
+        android:id="@+id/safe"
+        app:sRightIconRes="@mipmap/ic_left_more"
+        app:sLeftIconRes="@mipmap/ic_me_safe"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
 
-    <com.lqr.optionitemview.OptionItemView
-        android:id="@+id/notificationOptionItemView"
-        style="@style/OptionItem"
-        android:layout_marginTop="@dimen/option_item_margin_top"
-        android:background="@drawable/selector_common_item"
-        app:left_image_margin_left="@dimen/option_item_margin_left"
-        app:left_image_margin_right="@dimen/option_item_margin_right"
-        app:left_src="@mipmap/ic_notification"
-        app:left_text="消息通知"
-        app:left_text_color="@color/black0"
-        app:left_text_size="16sp" />
+    <com.allen.library.SuperTextView
+        app:sLeftTextString="通用 "
+        app:sRightIconRes="@mipmap/ic_left_more"
+        android:id="@+id/setting"
+        app:sLeftIconRes="@mipmap/ic_me_setting"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
 
-    <com.lqr.optionitemview.OptionItemView
-        android:id="@+id/passwordOptionItemView"
-        style="@style/OptionItem"
-        android:layout_marginTop="@dimen/option_item_margin_top"
-        android:background="@drawable/selector_common_item"
-        android:visibility="gone"
-        app:left_image_margin_left="@dimen/option_item_margin_left"
-        app:left_image_margin_right="@dimen/option_item_margin_right"
-        app:left_src="@mipmap/ic_account_setting"
-        app:left_text="账号与安全"
-        app:left_text_color="@color/black0"
-        app:left_text_size="16sp" />
+    <com.allen.library.SuperTextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/help"
+        app:sLeftTextString="帮助"
+        app:sRightIconRes="@mipmap/ic_left_more"
+        app:sLeftIconRes="@mipmap/ic_me_help"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+    <com.allen.library.SuperTextView
+        android:id="@+id/feed_back"
+        app:sLeftTextString="意见反馈"
+        app:sRightIconRes="@mipmap/ic_left_more"
+        app:sLeftIconRes="@mipmap/ic_me_feed_back"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
 
-    <com.lqr.optionitemview.OptionItemView
-        android:id="@+id/settintOptionItemView"
-        style="@style/OptionItem"
-        android:layout_marginTop="@dimen/option_item_margin_top"
-        android:background="@drawable/selector_common_item"
-        android:clickable="true"
-        app:left_image_margin_left="@dimen/option_item_margin_left"
-        app:left_image_margin_right="@dimen/option_item_margin_right"
-        app:left_src="@mipmap/me_press"
-        app:left_text="@string/setting"
-        app:left_text_color="@color/black0"
-        app:left_text_size="16sp" />
+    <com.allen.library.SuperTextView
+        app:sLeftTextString="举报投诉"
+        app:sRightIconRes="@mipmap/ic_left_more"
+        android:id="@+id/report"
+        app:sLeftIconRes="@mipmap/ic_me_report"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
 
 </LinearLayout>

@@ -163,6 +163,9 @@
         <activity
             android:name=".kit.conversation.ConversationInfoActivity"
             android:label="会话详情" />
+        <activity android:name=".app.personal.UserInfoActivity"
+            android:label="个人信息"
+            />
         <activity
             android:name=".kit.chatroom.ChatRoomListActivity"
             android:label="聊天室列表" />

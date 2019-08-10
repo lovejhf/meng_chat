@@ -20,16 +20,19 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.gyf.barlibrary.ImmersionBar;
+import com.lqr.imagepicker.ImagePicker;
+import com.lqr.imagepicker.Utils;
+import com.lqr.imagepicker.ui.ImageGridActivity;
 import com.mengchat.chat.R;
 import com.mengchat.chat.app.login.SMSLoginActivity;
 
 import butterknife.ButterKnife;
 
 public class SplashActivity extends AppCompatActivity {
-
     private static String[] permissions = {
             Manifest.permission.READ_PHONE_STATE,
             Manifest.permission.WRITE_EXTERNAL_STORAGE,
+            Manifest.permission.CAMERA
     };
     private static final int REQUEST_CODE_DRAW_OVERLAY = 101;
 

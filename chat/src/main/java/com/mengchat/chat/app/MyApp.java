@@ -4,6 +4,7 @@ import android.app.ActivityManager;
 import android.content.Context;
 
 import com.mengchat.chat.BuildConfig;
+import com.mengchat.chat.app.finger.FingerMessageContentViewHolder;
 import com.mengchat.chat.app.red.RedPackgeMessageContentViewHolder;
 import com.mengchat.chat.app.third.location.viewholder.LocationMessageContentViewHolder;
 import com.mengchat.chat.kit.WfcUIKit;
@@ -30,6 +31,7 @@ public class MyApp extends BaseApp {
             wfcUIKit.init(this);
             MessageViewHolderManager.getInstance().registerMessageViewHolder(LocationMessageContentViewHolder.class);
             MessageViewHolderManager.getInstance().registerMessageViewHolder(RedPackgeMessageContentViewHolder.class);
+            MessageViewHolderManager.getInstance().registerMessageViewHolder(FingerMessageContentViewHolder.class);
             setupWFCDirs();
         }
     }

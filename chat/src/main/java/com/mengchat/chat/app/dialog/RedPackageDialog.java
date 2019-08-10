@@ -15,6 +15,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.mengchat.chat.R;
 import com.mengchat.chat.kit.ChatManagerHolder;
+
 import cn.wildfirechat.model.UserInfo;
 
 public class RedPackageDialog extends Dialog {

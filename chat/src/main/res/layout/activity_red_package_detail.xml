@@ -17,11 +17,11 @@
 
         </RelativeLayout>
     <com.hjq.bar.TitleBar
-        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         app:bar_style="transparent"
         app:color_title="#F9FFB3"
         app:title="萌聊红包"
+        android:id="@+id/toolbar"
         app:size_title="18sp"
         app:color_right="#F9FFB3"
         app:title_right="红包记录"

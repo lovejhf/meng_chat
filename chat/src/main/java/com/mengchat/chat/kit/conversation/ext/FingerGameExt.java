@@ -9,6 +9,10 @@ import com.mengchat.chat.app.red_envelope.RedEnvelopeActivity;
 import com.mengchat.chat.kit.annotation.ExtContextMenuItem;
 import com.mengchat.chat.kit.conversation.ext.core.ConversationExt;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
 import cn.wildfirechat.RedEnvelopeVo;
 import cn.wildfirechat.message.TypingMessageContent;
 import cn.wildfirechat.model.Conversation;
@@ -24,22 +28,17 @@ public class FingerGameExt extends ConversationExt {
      */
     @ExtContextMenuItem(title = "[猜拳]")
     public void pickLocation(View containerView, Conversation conversation) {
+        List<String> list = new ArrayList<>();
+        list.add("finger1");
+        list.add("finger2");
+        list.add("finger3");
+        Random rand = new Random();
+        String fingerName = list.get(rand.nextInt(list.size()));
 
-        Intent intent = new Intent(context, RedEnvelopeActivity.class);
-        intent.putExtra("type",conversation);
-        startActivityForResult(intent, 100);
-        TypingMessageContent content = new TypingMessageContent(TypingMessageContent.TYPING_RED);
-        conversationViewModel.sendMessage(content);
+        conversationViewModel.sendFingerMessage(fingerName);
 
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (resultCode == RESULT_OK) {
-            RedEnvelopeVo locationData =  data.getParcelableExtra("redEnvelopeVo");
-            conversationViewModel.sendRedPackge(locationData);
-        }
-    }
 
     @Override
     public int priority() {

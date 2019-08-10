@@ -8,7 +8,7 @@
         <item name="colorAccent">#F3598D</item>
         <!-- 设置activity切换动画 -->
         <!--<item name="android:windowAnimationStyle">@style/activityAnimation</item>-->
-        <!-- Customize color of navigation drawer icon and back arrow -->
+         <!--Customize color of navigation drawer icon and back arrow-->
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>

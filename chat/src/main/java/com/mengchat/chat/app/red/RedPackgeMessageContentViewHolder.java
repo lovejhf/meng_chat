@@ -88,6 +88,8 @@ public class RedPackgeMessageContentViewHolder extends NormalMessageContentViewH
                         if (baseBean.getCode()==200){
                             redPackageDialog.dismiss();
                             Intent intent = new Intent(context, RedPackageDetailActivity.class);
+                            intent.putExtra("sendLogId",locationMessage.getSendLogId());
+                            intent.putExtra("robUser",ChatManagerHolder.gChatManager.getUserId());
                             context.startActivity(intent);
                             conversationViewModel.modifyRedPackageStatus(message);
                             // 被领取的红包的Uid
@@ -123,6 +125,8 @@ public class RedPackgeMessageContentViewHolder extends NormalMessageContentViewH
             //去查看自己发的红包
 
             Intent intent = new Intent(context, RedPackageDetailActivity.class);
+            intent.putExtra("sendLogId",locationMessage.getSendLogId());
+            intent.putExtra("robUser",ChatManagerHolder.gChatManager.getUserId());
             context.startActivity(intent);
         }
 
